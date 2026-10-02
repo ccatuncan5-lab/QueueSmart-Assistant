@@ -1,0 +1,1130 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>QueueSmart — PUP Enrollment Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                Q
+            </div>
+
+            <div>
+                <h1>QueueSmart</h1>
+                <span>PUP Enrollment Assistant</span>
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <button
+                class="nav-item active"
+                data-page="dashboard"
+                type="button">
+
+                <span>⌂</span>
+
+                <div>
+                    <strong>Dashboard</strong>
+                    <small>Overview</small>
+                </div>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="concern"
+                type="button">
+
+                <span>!</span>
+
+                <div>
+                    <strong>Report Concern</strong>
+                    <small>Submit concern</small>
+                </div>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="queue"
+                type="button">
+
+                <span>↻</span>
+
+                <div>
+                    <strong>My Queue</strong>
+                    <small>Track ticket</small>
+                </div>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="kiosk"
+                type="button">
+
+                <span>▣</span>
+
+                <div>
+                    <strong>Kiosk Mode</strong>
+                    <small>Self-service</small>
+                </div>
+
+            </button>
+
+        </nav>
+
+
+        <!-- USER -->
+
+        <div class="sidebar-user">
+
+            <div class="avatar">
+                JS
+            </div>
+
+            <div>
+                <strong>Juan Santos</strong>
+                <small>2022-00123-MN-0</small>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             DASHBOARD
+        ================================================== -->
+
+        <section
+            class="page active"
+            id="page-dashboard">
+
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="eyebrow">
+                        PUP ENROLLMENT ASSISTANT
+                    </span>
+
+                    <h2>
+                        Welcome back, Juan!
+                    </h2>
+
+                    <p>
+                        Manage your enrollment concerns,
+                        queue status, and assistance.
+                    </p>
+
+                </div>
+
+
+                <div class="status-pill">
+
+                    <span></span>
+
+                    System Online
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ACTION CARDS -->
+
+            <div class="action-grid">
+
+
+                <!-- REPORT CONCERN -->
+
+                <button
+                    class="action-card red-card"
+                    id="action-report"
+                    type="button">
+
+                    <div class="action-icon">
+                        !
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Report Concern
+                        </h3>
+
+                        <p>
+                            Submit an enrollment concern
+                            and get routed to the appropriate office.
+                        </p>
+
+                    </div>
+
+                    <b>→</b>
+
+                </button>
+
+
+
+                <!-- ACTIVE QUEUE -->
+
+                <button
+                    class="action-card blue-card"
+                    id="action-queue"
+                    type="button">
+
+                    <div class="action-icon">
+                        ↻
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Active Queue
+                        </h3>
+
+                        <p>
+                            View your queue ticket,
+                            position, department, and estimated wait.
+                        </p>
+
+                    </div>
+
+                    <b>→</b>
+
+                </button>
+
+
+
+                <!-- ROUTING -->
+
+                <button
+                    class="action-card gold-card"
+                    id="action-routing"
+                    type="button">
+
+                    <div class="action-icon">
+                        ⌖
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Check Routing
+                        </h3>
+
+                        <p>
+                            Find out which PUP office
+                            handles your enrollment concern.
+                        </p>
+
+                    </div>
+
+                    <b>→</b>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- QUEUE OVERVIEW -->
+
+            <div class="section-title">
+
+                <div>
+
+                    <h3>
+                        Queue Overview
+                    </h3>
+
+                    <p>
+                        Your current QueueSmart status.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="overview-grid">
+
+
+                <div class="stat-card">
+
+                    <span class="stat-label">
+                        TICKET NUMBER
+                    </span>
+
+                    <strong id="dashboard-ticket">
+                        —
+                    </strong>
+
+                    <small>
+                        Current queue ticket
+                    </small>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <span class="stat-label">
+                        POSITION
+                    </span>
+
+                    <strong id="dashboard-position">
+                        —
+                    </strong>
+
+                    <small>
+                        People ahead of you
+                    </small>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <span class="stat-label">
+                        EST. WAIT
+                    </span>
+
+                    <strong id="dashboard-wait">
+                        —
+                    </strong>
+
+                    <small>
+                        Estimated waiting time
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- INFORMATION CARD -->
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    i
+                </div>
+
+                <div>
+
+                    <h3>
+                        How QueueSmart works
+                    </h3>
+
+                    <p>
+                        Submit your concern, receive a queue
+                        ticket, and monitor your position while
+                        waiting for assistance.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             REPORT CONCERN PAGE
+        ================================================== -->
+
+        <section
+            class="page"
+            id="page-concern">
+
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="eyebrow">
+                        ENROLLMENT SUPPORT
+                    </span>
+
+                    <h2>
+                        Report a Concern
+                    </h2>
+
+                    <p>
+                        Submit your concern and provide
+                        the information needed for routing.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="two-column">
+
+
+                <!-- FORM CARD -->
+
+                <div class="card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Concern Details
+                            </h3>
+
+                            <p>
+                                Complete the form below.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <form id="concern-form">
+
+
+                        <!-- CONCERN TYPE -->
+
+                        <label>
+
+                            Concern Type
+
+                            <select
+                                id="concern-type"
+                                required>
+
+                                <option value="">
+                                    Select concern
+                                </option>
+
+                                <option value="Section Full">
+                                    Section Full
+                                </option>
+
+                                <option value="Enrollment Issue">
+                                    Enrollment Issue
+                                </option>
+
+                                <option value="Subject Concern">
+                                    Subject Concern
+                                </option>
+
+                                <option value="Document Concern">
+                                    Document Concern
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </label>
+
+
+
+                        <!-- DEPARTMENT -->
+
+                        <label>
+
+                            Department
+
+                            <select
+                                id="department"
+                                required>
+
+                                <option value="">
+                                    Select department
+                                </option>
+
+                                <option value="Admission and Registration">
+                                    Admission and Registration
+                                </option>
+
+                                <option value="Registrar">
+                                    Registrar
+                                </option>
+
+                                <option value="Accounting Office">
+                                    Accounting Office
+                                </option>
+
+                                <option value="Academic Department">
+                                    Academic Department
+                                </option>
+
+                                <option value="Student Services">
+                                    Student Services
+                                </option>
+
+                            </select>
+
+                        </label>
+
+
+
+                        <!-- SUBJECT -->
+
+                        <label>
+
+                            Section / Subject
+
+                            <input
+                                type="text"
+                                id="section-subject"
+                                placeholder="Example: EETE 301">
+
+                        </label>
+
+
+
+                        <!-- DETAILS -->
+
+                        <label>
+
+                            Concern Details
+
+                            <textarea
+                                id="concern-details"
+                                rows="6"
+                                placeholder="Describe your concern..."
+                                required></textarea>
+
+                        </label>
+
+
+
+                        <!-- ERROR -->
+
+                        <div
+                            id="form-error"
+                            class="form-message error">
+                        </div>
+
+
+
+                        <!-- SUCCESS -->
+
+                        <div
+                            id="submission-success"
+                            class="form-message success">
+                        </div>
+
+
+
+                        <!-- SUBMIT -->
+
+                        <button
+                            class="primary-button"
+                            type="submit">
+
+                            Submit Concern
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+
+                <!-- ROUTING CARD -->
+
+                <div
+                    class="card routing-card"
+                    id="routing-panel">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Routing Guide
+                            </h3>
+
+                            <p>
+                                Concern destination offices.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="routing-list">
+
+
+                        <div class="routing-item">
+
+                            <span>01</span>
+
+                            <div>
+
+                                <strong>
+                                    Admission and Registration
+                                </strong>
+
+                                <small>
+                                    Enrollment and registration
+                                    concerns
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="routing-item">
+
+                            <span>02</span>
+
+                            <div>
+
+                                <strong>
+                                    Registrar
+                                </strong>
+
+                                <small>
+                                    Academic records and documents
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="routing-item">
+
+                            <span>03</span>
+
+                            <div>
+
+                                <strong>
+                                    Accounting Office
+                                </strong>
+
+                                <small>
+                                    Assessment and payment
+                                    concerns
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="routing-item">
+
+                            <span>04</span>
+
+                            <div>
+
+                                <strong>
+                                    Academic Department
+                                </strong>
+
+                                <small>
+                                    Subject and section concerns
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="routing-item">
+
+                            <span>05</span>
+
+                            <div>
+
+                                <strong>
+                                    Student Services
+                                </strong>
+
+                                <small>
+                                    General student assistance
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MY QUEUE PAGE
+        ================================================== -->
+
+        <section
+            class="page"
+            id="page-queue">
+
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="eyebrow">
+                        QUEUE STATUS
+                    </span>
+
+                    <h2>
+                        My Queue
+                    </h2>
+
+                    <p>
+                        Monitor your current queue ticket.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NO QUEUE -->
+
+            <div
+                id="queue-empty"
+                class="empty-card">
+
+
+                <div class="empty-icon">
+                    ↻
+                </div>
+
+                <h3>
+                    No Active Queue
+                </h3>
+
+                <p>
+                    You currently do not have
+                    an active queue ticket.
+                </p>
+
+                <button
+                    class="primary-button"
+                    type="button"
+                    onclick="navigateTo('kiosk')">
+
+                    Join Queue
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ACTIVE QUEUE -->
+
+            <div
+                id="queue-active"
+                class="queue-layout">
+
+
+                <!-- TICKET -->
+
+                <div class="queue-main card">
+
+
+                    <div class="queue-ticket-label">
+                        YOUR QUEUE NUMBER
+                    </div>
+
+
+                    <div
+                        class="queue-number"
+                        id="queue-number">
+
+                        Q-000
+
+                    </div>
+
+
+                    <div
+                        class="queue-department"
+                        id="queue-department">
+
+                        Admission and Registration
+
+                    </div>
+
+
+
+                    <!-- QUEUE STATS -->
+
+                    <div class="queue-stats">
+
+
+                        <div>
+
+                            <span>
+                                POSITION
+                            </span>
+
+                            <strong id="queue-position">
+                                0
+                            </strong>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <span>
+                                EST. WAIT
+                            </span>
+
+                            <strong id="queue-wait">
+                                0 min
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PROGRESS -->
+
+                    <div class="progress-area">
+
+                        <div class="progress-header">
+
+                            <span>
+                                Queue progress
+                            </span>
+
+                            <span>
+                                Waiting
+                            </span>
+
+                        </div>
+
+
+                        <div class="progress-track">
+
+                            <div
+                                class="progress-bar"
+                                id="queue-progress">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- LEAVE -->
+
+                    <button
+                        class="danger-button"
+                        id="leave-queue"
+                        type="button">
+
+                        Leave Queue
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- STAFF STATUS -->
+
+                <div class="card staff-card">
+
+                    <div class="staff-icon">
+                        ●
+                    </div>
+
+                    <h3>
+                        Waiting for staff
+                    </h3>
+
+                    <p>
+                        Please remain available.
+                        Your ticket will be called
+                        when it reaches the front.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             KIOSK PAGE
+        ================================================== -->
+
+        <section
+            class="page"
+            id="page-kiosk">
+
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="eyebrow">
+                        SELF-SERVICE
+                    </span>
+
+                    <h2>
+                        Kiosk Mode
+                    </h2>
+
+                    <p>
+                        Quickly access QueueSmart services.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="kiosk-card">
+
+
+                <!-- KIOSK HEADER -->
+
+                <div class="kiosk-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            QUEUESMART KIOSK
+                        </span>
+
+                        <h3>
+                            What would you like to do?
+                        </h3>
+
+                    </div>
+
+
+                    <div class="kiosk-status">
+                        ● READY
+                    </div>
+
+                </div>
+
+
+
+                <!-- KIOSK MESSAGE -->
+
+                <div
+                    id="kiosk-message"
+                    class="kiosk-message">
+                </div>
+
+
+
+                <!-- KIOSK TICKET -->
+
+                <div
+                    id="kiosk-ticket"
+                    class="kiosk-ticket">
+                </div>
+
+
+
+                <!-- KIOSK ACTIONS -->
+
+                <div class="kiosk-grid">
+
+
+                    <!-- JOIN -->
+
+                    <button
+                        class="kiosk-action"
+                        id="kiosk-join"
+                        type="button">
+
+                        <span>
+                            ↻
+                        </span>
+
+                        <strong>
+                            Join Queue
+                        </strong>
+
+                        <small>
+                            Get a queue ticket
+                        </small>
+
+                    </button>
+
+
+
+                    <!-- REPORT -->
+
+                    <button
+                        class="kiosk-action"
+                        id="kiosk-report"
+                        type="button">
+
+                        <span>
+                            !
+                        </span>
+
+                        <strong>
+                            Report Section Full
+                        </strong>
+
+                        <small>
+                            Report an unavailable section
+                        </small>
+
+                    </button>
+
+
+
+                    <!-- CHECK -->
+
+                    <button
+                        class="kiosk-action"
+                        id="kiosk-check"
+                        type="button">
+
+                        <span>
+                            ⌖
+                        </span>
+
+                        <strong>
+                            Check Ticket
+                        </strong>
+
+                        <small>
+                            View your queue status
+                        </small>
+
+                    </button>
+
+
+
+                    <!-- ASSISTANCE -->
+
+                    <button
+                        class="kiosk-action"
+                        id="kiosk-help"
+                        type="button">
+
+                        <span>
+                            ?
+                        </span>
+
+                        <strong>
+                            Ask for Assistance
+                        </strong>
+
+                        <small>
+                            Request staff assistance
+                        </small>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         TOAST NOTIFICATION
+    ====================================================== -->
+
+    <div
+        id="toast"
+        class="toast">
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
